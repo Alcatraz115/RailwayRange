@@ -8,25 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		85E7F38D2B03D9E9003A5C51 /* RailwayRangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7F38C2B03D9E9003A5C51 /* RailwayRangeApp.swift */; };
-		85E7F38F2B03D9E9003A5C51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7F38E2B03D9E9003A5C51 /* ContentView.swift */; };
-		85E7F3912B03D9E9003A5C51 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7F3902B03D9E9003A5C51 /* Item.swift */; };
 		85E7F3932B03D9EB003A5C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E7F3922B03D9EB003A5C51 /* Assets.xcassets */; };
 		85E7F3962B03D9EB003A5C51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E7F3952B03D9EB003A5C51 /* Preview Assets.xcassets */; };
-		85E7F39D2B03DB3A003A5C51 /* StationDistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7F39C2B03DB39003A5C51 /* StationDistanceView.swift */; };
+		85E7F39D2B03DB3A003A5C51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7F39C2B03DB39003A5C51 /* ContentView.swift */; };
 		85E7F39F2B03FB1D003A5C51 /* StationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7F39E2B03FB1D003A5C51 /* StationPickerView.swift */; };
 		85E7F3A52B040B93003A5C51 /* RailwayDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7F3A42B040B93003A5C51 /* RailwayDataProvider.swift */; };
+		85E7F3A82B04146E003A5C51 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7F3A72B04146E003A5C51 /* Station.swift */; };
+		85E7F3AA2B0449C3003A5C51 /* Keyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7F3A92B0449C3003A5C51 /* Keyword.swift */; };
+		85E7F3AD2B044A43003A5C51 /* BackgroundImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7F3AC2B044A43003A5C51 /* BackgroundImporter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85E7F3892B03D9E9003A5C51 /* RailwayRange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RailwayRange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E7F38C2B03D9E9003A5C51 /* RailwayRangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailwayRangeApp.swift; sourceTree = "<group>"; };
-		85E7F38E2B03D9E9003A5C51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		85E7F3902B03D9E9003A5C51 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		85E7F3922B03D9EB003A5C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85E7F3952B03D9EB003A5C51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		85E7F39C2B03DB39003A5C51 /* StationDistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDistanceView.swift; sourceTree = "<group>"; };
+		85E7F39C2B03DB39003A5C51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85E7F39E2B03FB1D003A5C51 /* StationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPickerView.swift; sourceTree = "<group>"; };
 		85E7F3A42B040B93003A5C51 /* RailwayDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailwayDataProvider.swift; sourceTree = "<group>"; };
+		85E7F3A72B04146E003A5C51 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		85E7F3A92B0449C3003A5C51 /* Keyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyword.swift; sourceTree = "<group>"; };
+		85E7F3AC2B044A43003A5C51 /* BackgroundImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImporter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +61,11 @@
 		85E7F38B2B03D9E9003A5C51 /* RailwayRange */ = {
 			isa = PBXGroup;
 			children = (
-				85E7F38C2B03D9E9003A5C51 /* RailwayRangeApp.swift */,
+				85E7F3AB2B0449FC003A5C51 /* Views */,
+				85E7F3A62B041459003A5C51 /* Models */,
 				85E7F3A42B040B93003A5C51 /* RailwayDataProvider.swift */,
-				85E7F38E2B03D9E9003A5C51 /* ContentView.swift */,
-				85E7F39C2B03DB39003A5C51 /* StationDistanceView.swift */,
-				85E7F39E2B03FB1D003A5C51 /* StationPickerView.swift */,
-				85E7F3902B03D9E9003A5C51 /* Item.swift */,
+				85E7F3AC2B044A43003A5C51 /* BackgroundImporter.swift */,
+				85E7F38C2B03D9E9003A5C51 /* RailwayRangeApp.swift */,
 				85E7F3922B03D9EB003A5C51 /* Assets.xcassets */,
 				85E7F3942B03D9EB003A5C51 /* Preview Content */,
 			);
@@ -77,6 +78,24 @@
 				85E7F3952B03D9EB003A5C51 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85E7F3A62B041459003A5C51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85E7F3A72B04146E003A5C51 /* Station.swift */,
+				85E7F3A92B0449C3003A5C51 /* Keyword.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		85E7F3AB2B0449FC003A5C51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85E7F39C2B03DB39003A5C51 /* ContentView.swift */,
+				85E7F39E2B03FB1D003A5C51 /* StationPickerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,11 +168,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E7F39D2B03DB3A003A5C51 /* StationDistanceView.swift in Sources */,
+				85E7F3AD2B044A43003A5C51 /* BackgroundImporter.swift in Sources */,
+				85E7F39D2B03DB3A003A5C51 /* ContentView.swift in Sources */,
+				85E7F3AA2B0449C3003A5C51 /* Keyword.swift in Sources */,
 				85E7F39F2B03FB1D003A5C51 /* StationPickerView.swift in Sources */,
-				85E7F38F2B03D9E9003A5C51 /* ContentView.swift in Sources */,
-				85E7F3912B03D9E9003A5C51 /* Item.swift in Sources */,
 				85E7F38D2B03D9E9003A5C51 /* RailwayRangeApp.swift in Sources */,
+				85E7F3A82B04146E003A5C51 /* Station.swift in Sources */,
 				85E7F3A52B040B93003A5C51 /* RailwayDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

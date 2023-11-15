@@ -11,7 +11,7 @@ struct StationPickerView: View {
     @Environment(\.dismiss) private var dismiss
     
     @Binding var selectedStation: Station?
-    var stationKeywords: [StationKeyword]
+    var stationKeywords: [Keyword]
     var stations: [Station]
     @State var searchTerm = ""
     

@@ -10,7 +10,7 @@ import Foundation
 protocol RailwayDataProviding {
     func fetchStations() async throws -> [Station]
     
-    func fetchKeywords() async throws -> [StationKeyword]
+    func fetchKeywords() async throws -> [Keyword]
 }
 
 struct RailwayDataProvider: RailwayDataProviding {
@@ -29,7 +29,7 @@ struct RailwayDataProvider: RailwayDataProviding {
         
     }
     
-    func fetchKeywords() async throws -> [StationKeyword] {
+    func fetchKeywords() async throws -> [Keyword] {
         let url = URL(string: "https://koleo.pl/api/v2/main/station_keywords")
         
         var request = URLRequest(url: url!)
@@ -40,6 +40,6 @@ struct RailwayDataProvider: RailwayDataProviding {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         let (data, _) = try await URLSession.shared.data(for: request)
-        return try decoder.decode([StationKeyword].self, from: data)
+        return try decoder.decode([Keyword].self, from: data)
     }
 }
