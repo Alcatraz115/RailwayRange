@@ -13,7 +13,7 @@ struct ContentView: View {
     @AppStorage("lastFetched") private var lastFetched: Double = Date.now.timeIntervalSince1970
     @Environment(\.modelContext) private var modelContext
     
-    
+//    @Query(sort: \Station.hits, order: .reverse) private var stations: [Station]
     @Query private var stations: [Station]
     @Query private var keywords: [Keyword]
     
@@ -30,9 +30,9 @@ struct ContentView: View {
                 Text(firstSelectedStation?.name ?? "Brak Z")
                 NavigationLink(
                     destination: StationPickerView(
-                        selectedStation: $firstSelectedStation,
-                        stationKeywords: keywords,
-                        stations: stations
+                        selectedStation: $firstSelectedStation
+//                        stationKeywords: keywords,
+//                        stations: stations
                     ),
                     label: {
                         Text("Wybierz Z")
@@ -40,9 +40,9 @@ struct ContentView: View {
                 Text(secondSelectedStation?.name ?? "Brak DO")
                 NavigationLink(
                     destination: StationPickerView(
-                        selectedStation: $secondSelectedStation,
-                        stationKeywords: keywords,
-                        stations: stations
+                        selectedStation: $secondSelectedStation
+//                        stationKeywords: keywords,
+//                        stations: stations
                     ),
                     label: {
                         Text("Wybierz DO")
@@ -55,19 +55,19 @@ struct ContentView: View {
                 
                 Spacer()
                 Text("Ładowanie: \(isLoading ? "Tak" : "Nie")")
-                HStack{
-                    Spacer()
-                    Button("TMP1") {
-                        Task {
-                            try await fetchData()
-                        }
-                    }
-                    Spacer()
-                    Button("TMP Print") {
-                        tmpDebug("X")
-                    }
-                    Spacer()
-                }
+//                HStack{
+//                    Spacer()
+//                    Button("TMP1") {
+//                        Task {
+//                            try await fetchData()
+//                        }
+//                    }
+//                    Spacer()
+//                    Button("TMP Print") {
+//                        tmpDebug("X")
+//                    }
+//                    Spacer()
+//                }
             }
             .navigationTitle("Odległość")
             .task {
@@ -125,7 +125,7 @@ extension ContentView {
     }
     
     private var hasDataExpired: Bool {
-        let timeLimit = 300 // 5 mins
+        let timeLimit = 24 * 60 * 60
         let currentTime = Date.now
         let lastFetchedTime = Date(timeIntervalSince1970: lastFetched)
         
